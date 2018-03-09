@@ -4,11 +4,15 @@
   "description": "Lab 38: Photo Uplaods - Create a frontend that follows react redux best practices with a landing page that enables a user to signup or signin. Redirect the user to the dashboard page on signup or signin and store the users token in a cookie or localstorage on signin.  Give the user the ability to upload an image to use as an avitar.",
   "main": "webpack.config.js",
   "scripts": {
-    "lint": "eslint .",
-    "build": "webpack",
+    "bundle": "webpack",
     "watch": "webpack-dev-server --inline --hot",
-    "test": "jest --verbose -i",
-    "test:debug": "DEBUG=http* jest --verbose -i"
+    "test": "jest",
+    "test:watch": "jest --watchAll",
+    "heroku-postbuild": "webpack -p --progress",
+    "start":"node index.js"
+  },
+  "engines": {
+    "node": "9.3.0"
   },
   "keywords": [
     "webpack",
@@ -54,6 +58,11 @@
   },
   "jest": {
     "verbose": true,
+    "globals": {
+      "__DEBUG__": false,
+      "process.env": {
+        "NODE_ENV": "production"
+      },
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "identity-obj-proxy"
     },
@@ -72,5 +81,6 @@
         "statements": 80
       }
     }
+  }
   }
 }
