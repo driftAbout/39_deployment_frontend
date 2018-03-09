@@ -9,7 +9,7 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "heroku-postbuild": "webpack -p --progress",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "engines": {
     "node": "9.3.0"
@@ -63,24 +63,24 @@
       "process.env": {
         "NODE_ENV": "production"
       },
-    "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "identity-obj-proxy"
-    },
-    "testEnvironment": "jsdom",
-    "collectCoverage": true,
-    "coverageDirectory": "./coverage",
-    "coveragePathIgnorePatterns": [
-      "/scss$/",
-      "/__test__/"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 80,
-        "functions": 80,
-        "lines": 80,
-        "statements": 80
+      "moduleNameMapper": {
+        "^.+\\.(css|scss)$": "identity-obj-proxy"
+      },
+      "testEnvironment": "jsdom",
+      "collectCoverage": true,
+      "coverageDirectory": "./coverage",
+      "coveragePathIgnorePatterns": [
+        "/scss$/",
+        "/__test__/"
+      ],
+      "coverageThreshold": {
+        "global": {
+          "branches": 80,
+          "functions": 80,
+          "lines": 80,
+          "statements": 80
+        }
       }
     }
-  }
   }
 }
