@@ -3,11 +3,7 @@ import {Settings} from '../settings';
 import {connect} from 'react-redux';
 
 class Dashboard extends React.Component{
-
-  // componentWillReceiveProps(nextProps){
-  //   this.props.createProfileRequest(nextProps.token);
-  // }
-
+  
   render(){
     return (
       <section className="dashboard-container">
